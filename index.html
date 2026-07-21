@@ -104,8 +104,13 @@
   /* projects */
   .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   @media(max-width:720px){.proj-grid{grid-template-columns:1fr}}
-  .proj{background:var(--chalk);border:1px solid var(--line);border-radius:8px;padding:26px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .proj{background:var(--chalk);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
   .proj:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,42,58,.10)}
+  .proj-media{display:block;width:100%;aspect-ratio:16/9;background:var(--field-deep);position:relative}
+  .proj-media img{display:block;width:100%;height:100%;object-fit:cover}
+  .proj-media .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#7FA588;font-family:var(--mono);font-size:12px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,var(--field-deep),var(--field-deep) 14px,#20422E 14px,#20422E 28px)}
+  .proj-media.missing .fallback{display:flex}
+  .proj-body{padding:22px 26px 26px;display:flex;flex-direction:column;flex:1}
   .proj .type{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
   .proj h3{font-family:var(--display);font-weight:600;font-size:26px;text-transform:uppercase;margin-bottom:10px}
   .proj p{color:#33474F;font-size:15.5px;flex:1}
@@ -249,32 +254,56 @@
     <div class="sec-head"><span class="kicker">03 — Film Room</span><h2>Projects</h2></div>
     <div class="proj-grid">
       <div class="proj reveal">
-        <div class="type">Automation · In production</div>
-        <h3>Automated Scouting Report</h3>
-        <p>After pulling pitch-level data from Statcast that MLB and various MiLB teams have available, I created a season-long report on any desired pitcher. This includes stats pulled from FanGraphs, in addition to a Stuff+ and Location+ model I created to measure each arm.</p>
-        <div class="stack"><span>Python</span><span>SQL</span><span>Data Viz</span></div>
-        <a class="more" href="https://github.com/cdague10" target="_blank" rel="noopener">Scouting Report Example →</a>
+        <div class="proj-media">
+          <img src="assets/scouting-report.png" alt="Sample page from the pitcher scouting report" loading="lazy" onerror="this.parentElement.classList.add('missing')">
+          <div class="fallback"><span>[ add assets/scouting-report.png ]</span><span>screenshot of the report</span></div>
+        </div>
+        <div class="proj-body">
+          <div class="type">Automation · In production</div>
+          <h3>Automated Scouting Report</h3>
+          <p>After pulling pitch-level data from Statcast that MLB and various MiLB teams have available, I created a season-long report on any desired pitcher. This includes stats pulled from FanGraphs, in addition to a Stuff+ and Location+ model I created to measure each arm.</p>
+          <div class="stack"><span>Python</span><span>SQL</span><span>Data Viz</span></div>
+          <a class="more" href="https://github.com/cdague10" target="_blank" rel="noopener">Scouting Report Example →</a>
+        </div>
       </div>
       <div class="proj reveal">
-        <div class="type">Analysis · Public writeup</div>
-        <h3>Home Run Derby Effect</h3>
-        <p>Does the Derby really ruin your swing? A deep dive into recent participants and whether their offensive production actually changes after the All-Star festivities.</p>
-        <div class="stack"><span>Python</span><span>Statcast Data</span><span>Statistical Analysis</span></div>
-        <a class="more" href="https://medium.com/@connordague10/does-the-home-run-derby-really-ruin-your-swing-3fd10360ab01" target="_blank" rel="noopener">Read the analysis →</a>
+        <div class="proj-media">
+          <img src="assets/hrd-analysis.png" alt="Chart from the Home Run Derby swing analysis" loading="lazy" onerror="this.parentElement.classList.add('missing')">
+          <div class="fallback"><span>[ add assets/hrd-analysis.png ]</span><span>a chart from the article works great</span></div>
+        </div>
+        <div class="proj-body">
+          <div class="type">Analysis · Public writeup</div>
+          <h3>Home Run Derby Effect</h3>
+          <p>Does the Derby really ruin your swing? A deep dive into recent participants and whether their offensive production actually changes after the All-Star festivities.</p>
+          <div class="stack"><span>Python</span><span>Statcast Data</span><span>Statistical Analysis</span></div>
+          <a class="more" href="https://medium.com/@connordague10/does-the-home-run-derby-really-ruin-your-swing-3fd10360ab01" target="_blank" rel="noopener">Read the analysis →</a>
+        </div>
       </div>
       <div class="proj reveal">
-        <div class="type">Data engineering</div>
-        <h3>College Basketball Shot Chart App</h3>
-        <p>After pulling every play from ESPN CBB API, I created a shot chart app that includes a Shot+ and Result+ rating to quantify the decision-making and quality of player.</p>
-        <div class="stack"><span>Python</span><span>R</span><span>Data Management</span></div>
-        <a class="more" href="https://cbb-shotchart-cdague10.streamlit.app/" target="_blank" rel="noopener">CBB Shot Chart App →</a>
+        <div class="proj-media">
+          <img src="assets/cbb-shot-chart.png" alt="Screenshot of the college basketball shot chart app" loading="lazy" onerror="this.parentElement.classList.add('missing')">
+          <div class="fallback"><span>[ add assets/cbb-shot-chart.png ]</span><span>screenshot of the app</span></div>
+        </div>
+        <div class="proj-body">
+          <div class="type">Data engineering</div>
+          <h3>College Basketball Shot Chart App</h3>
+          <p>After pulling every play from ESPN CBB API, I created a shot chart app that includes a Shot+ and Result+ rating to quantify the decision-making and quality of player.</p>
+          <div class="stack"><span>Python</span><span>R</span><span>Data Management</span></div>
+          <a class="more" href="https://cbb-shotchart-cdague10.streamlit.app/" target="_blank" rel="noopener">CBB Shot Chart App →</a>
+        </div>
       </div>
       <div class="proj reveal">
-        <div class="type">Next up</div>
-        <h3>NFL Play Prediction & Animation</h3>
-        <p>Using available NFL tracking data, I created an animation of a single play, while predicting run or pass based on pre-play movement and formation.</p>
-        <div class="stack"><span>Python</span><span>R</span><span>Tracking Data</span></div>
-        <a class="more" href="https://github.com/cdague10/NFL-Play-Prediction-Animation" target="_blank" rel="noopener">Animation Example →</a>
+        <div class="proj-media">
+          <img src="assets/nfl-play-animation.gif" alt="Animated NFL play with run/pass prediction model output" loading="lazy" onerror="this.parentElement.classList.add('missing')">
+          <div class="fallback"><span>[ add assets/nfl-play-animation.gif ]</span><span>gif or png of the play animation</span></div>
+        </div>
+        <div class="proj-body">
+          <div class="type">Next up</div>
+          <h3>NFL Play Prediction &amp; Animation</h3>
+          <p>Using available NFL tracking data, I created an animation of a single play, while predicting run or pass based on pre-play movement and formation.</p>
+          <div class="stack"><span>Python</span><span>R</span><span>Tracking Data</span></div>
+          <a class="more" href="https://github.com/cdague10/NFL-Play-Prediction-Animation" target="_blank" rel="noopener">Animation Example →</a>
+        </div>
       </div>
     </div>
   </div>
