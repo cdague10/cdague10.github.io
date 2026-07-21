@@ -107,7 +107,7 @@
   .proj{background:var(--chalk);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
   .proj:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,42,58,.10)}
   .proj-media{display:block;width:100%;aspect-ratio:16/9;background:var(--field-deep);position:relative}
-  .proj-media img{display:block;width:100%;height:100%;object-fit:cover}
+  .proj-media img,.proj-media video{display:block;width:100%;height:100%;object-fit:cover}
   .proj-media .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#7FA588;font-family:var(--mono);font-size:12px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,var(--field-deep),var(--field-deep) 14px,#20422E 14px,#20422E 28px)}
   .proj-media.missing .fallback{display:flex}
   .proj-body{padding:22px 26px 26px;display:flex;flex-direction:column;flex:1}
@@ -268,8 +268,8 @@
       </div>
       <div class="proj reveal">
         <div class="proj-media">
-          <img src="assets/hrd-analysis.png" alt="Chart from the Home Run Derby swing analysis" loading="lazy" onerror="this.parentElement.classList.add('missing')">
-          <div class="fallback"><span>[ add assets/hrd-analysis.png ]</span><span>a chart from the article works great</span></div>
+          <img src="assets/hrd-analysis.jpg" alt="Bryce Harper and other MLB All-Stars at the Home Run Derby" loading="lazy" onerror="this.parentElement.classList.add('missing')">
+          <div class="fallback"><span>[ add assets/hrd-analysis.jpg ]</span><span>a chart from the article works great</span></div>
         </div>
         <div class="proj-body">
           <div class="type">Analysis · Public writeup</div>
@@ -294,8 +294,7 @@
       </div>
       <div class="proj reveal">
         <div class="proj-media">
-          <img src="assets/nfl-play-animation.gif" alt="Animated NFL play with run/pass prediction model output" loading="lazy" onerror="this.parentElement.classList.add('missing')">
-          <div class="fallback"><span>[ add assets/nfl-play-animation.gif ]</span><span>gif or png of the play animation</span></div>
+          <video src="assets/nfl-play-animation.mp4" poster="assets/nfl-play-poster.jpg" autoplay muted loop playsinline aria-label="Animated NFL play with run/pass prediction model output"></video>
         </div>
         <div class="proj-body">
           <div class="type">Next up</div>
