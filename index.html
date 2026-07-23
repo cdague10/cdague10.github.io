@@ -10,13 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F4F6F2;
+    --paper:#F5F1E6;
     --ink:#0E2A3A;
-    --field:#2D5A3D;
-    --field-deep:#1C3A28;
+    --field:#2C5F8A;
+    --field-deep:#0F2A44;
     --gold:#D99A2B;
-    --chalk:#FFFFFF;
-    --line:#D8DED6;
+    --chalk:#FBF8EF;
+    --line:#E1DAC7;
     --mono:'IBM Plex Mono', ui-monospace, monospace;
     --body:'Source Sans 3', -apple-system, 'Segoe UI', sans-serif;
     --display:'Barlow Condensed', 'Arial Narrow', sans-serif;
@@ -30,7 +30,7 @@
   .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
   /* ---------- nav ---------- */
-  nav{position:sticky;top:0;z-index:50;background:rgba(244,246,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav{position:sticky;top:0;z-index:50;background:rgba(245,241,230,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
   .nav-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
   .nav-name span{color:var(--gold)}
@@ -59,9 +59,9 @@
 
   /* strike zone */
   .zone-card{background:var(--field-deep);border-radius:10px;padding:26px 26px 18px;box-shadow:0 20px 50px rgba(14,42,58,.18)}
-  .zone-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#9DBBA4;display:flex;justify-content:space-between;margin-bottom:14px}
+  .zone-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#9FB8D1;display:flex;justify-content:space-between;margin-bottom:14px}
   .zone-svg{display:block;width:100%;height:auto}
-  .zone-caption{font-family:var(--mono);font-size:11px;color:#7FA588;margin-top:12px;min-height:2.4em}
+  .zone-caption{font-family:var(--mono);font-size:11px;color:#7096B8;margin-top:12px;min-height:2.4em}
   .pitch{cursor:pointer;transition:r .15s ease}
   @media(prefers-reduced-motion:no-preference){
     .pitch{opacity:0;animation:plot .4s ease forwards}
@@ -75,7 +75,7 @@
   .stat:first-child{border-left:none}
   @media(max-width:640px){.stat:nth-child(3){border-left:none}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
   .stat .num{font-family:var(--display);font-weight:800;font-size:44px;color:var(--field-deep);line-height:1}
-  .stat .lab{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5B6B63;margin-top:6px}
+  .stat .lab{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5B6572;margin-top:6px}
 
   /* ---------- sections ---------- */
   section{padding:72px 0;border-bottom:1px solid var(--line)}
@@ -90,7 +90,7 @@
   .about-side{display:flex;flex-direction:column;gap:20px}
   .about-photo{position:relative;border-radius:8px;overflow:hidden;background:var(--field-deep);aspect-ratio:4/5}
   .about-photo img{display:block;width:100%;height:100%;object-fit:cover}
-  .about-photo .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#7FA588;font-family:var(--mono);font-size:12px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,var(--field-deep),var(--field-deep) 14px,#20422E 14px,#20422E 28px)}
+  .about-photo .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#7096B8;font-family:var(--mono);font-size:12px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,var(--field-deep),var(--field-deep) 14px,#14324F 14px,#14324F 28px)}
   .about-photo.missing .fallback{display:flex}
   .report-card{background:var(--chalk);border:1px solid var(--line);border-radius:8px;padding:22px;font-family:var(--mono);font-size:13px}
   .report-card h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--field);margin-bottom:14px;font-weight:500}
@@ -101,7 +101,7 @@
   .xp{display:grid;grid-template-columns:170px 1fr;gap:8px 32px;padding:26px 0;border-top:1px solid var(--line)}
   .xp:first-of-type{border-top:none;padding-top:0}
   @media(max-width:640px){.xp{grid-template-columns:1fr}}
-  .xp-date{font-family:var(--mono);font-size:13px;color:#5B6B63;padding-top:4px}
+  .xp-date{font-family:var(--mono);font-size:13px;color:#5B6572;padding-top:4px}
   .xp h3{font-family:var(--display);font-weight:600;font-size:26px;text-transform:uppercase;letter-spacing:.02em}
   .xp .role{font-family:var(--mono);font-size:13px;color:var(--field);margin-bottom:8px}
   .xp p{max-width:66ch;color:#33474F}
@@ -113,7 +113,7 @@
   .proj:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,42,58,.10)}
   .proj-media{display:block;width:100%;aspect-ratio:16/9;background:var(--field-deep);position:relative}
   .proj-media img,.proj-media video{display:block;width:100%;height:100%;object-fit:cover}
-  .proj-media .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#7FA588;font-family:var(--mono);font-size:12px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,var(--field-deep),var(--field-deep) 14px,#20422E 14px,#20422E 28px)}
+  .proj-media .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#7096B8;font-family:var(--mono);font-size:12px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,var(--field-deep),var(--field-deep) 14px,#14324F 14px,#14324F 28px)}
   .proj-media.missing .fallback{display:flex}
   .proj-body{padding:22px 26px 26px;display:flex;flex-direction:column;flex:1}
   .proj .type{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
@@ -126,7 +126,7 @@
   /* writing */
   .post{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:var(--chalk);border:1px solid var(--line);border-radius:8px;padding:26px;margin-bottom:16px;transition:transform .18s ease}
   .post:hover{transform:translateY(-3px)}
-  .post .date{font-family:var(--mono);font-size:12px;color:#5B6B63;margin-bottom:6px}
+  .post .date{font-family:var(--mono);font-size:12px;color:#5B6572;margin-bottom:6px}
   .post h3{font-family:var(--display);font-weight:600;font-size:27px;text-transform:uppercase;line-height:1.05}
   .post p{color:#33474F;margin-top:8px;max-width:64ch}
   .post .arrow{font-family:var(--mono);font-size:22px;color:var(--gold)}
@@ -138,12 +138,12 @@
   #contact .sec-head .kicker{color:var(--gold)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
   @media(max-width:720px){.contact-grid{grid-template-columns:1fr}}
-  .contact-grid p{max-width:44ch;color:#C9D6CB}
+  .contact-grid p{max-width:44ch;color:#C6D3E0}
   .contact-list{font-family:var(--mono);font-size:15px;display:flex;flex-direction:column;gap:14px}
-  .contact-list a{color:var(--paper);border-bottom:1px dashed #4E7A5C;padding-bottom:2px;width:fit-content}
+  .contact-list a{color:var(--paper);border-bottom:1px dashed #3D6690;padding-bottom:2px;width:fit-content}
   .contact-list a:hover{color:var(--gold);border-color:var(--gold)}
-  .contact-list .lab{color:#7FA588;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:2px}
-  footer{background:var(--field-deep);color:#7FA588;font-family:var(--mono);font-size:12px;padding:20px 0 30px;border-top:1px solid #2A4A36}
+  .contact-list .lab{color:#7096B8;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:2px}
+  footer{background:var(--field-deep);color:#7096B8;font-family:var(--mono);font-size:12px;padding:20px 0 30px;border-top:1px solid #1B3A57}
 
   @media(prefers-reduced-motion:no-preference){
     .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
@@ -183,12 +183,12 @@
     <div class="zone-card">
       <div class="zone-label"><span>Pitch Chart</span><span>CD-10</span></div>
       <svg class="zone-svg" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" aria-label="Decorative strike zone chart; hover the dots">
-        <rect x="90" y="70" width="120" height="150" fill="none" stroke="#9DBBA4" stroke-width="1.5"/>
-        <line x1="130" y1="70" x2="130" y2="220" stroke="#3D6B4C" stroke-width="1"/>
-        <line x1="170" y1="70" x2="170" y2="220" stroke="#3D6B4C" stroke-width="1"/>
-        <line x1="90" y1="120" x2="210" y2="120" stroke="#3D6B4C" stroke-width="1"/>
-        <line x1="90" y1="170" x2="210" y2="170" stroke="#3D6B4C" stroke-width="1"/>
-        <path d="M115 285 L185 285 L185 295 L150 310 L115 295 Z" fill="none" stroke="#9DBBA4" stroke-width="1.5"/>
+        <rect x="90" y="70" width="120" height="150" fill="none" stroke="#9FB8D1" stroke-width="1.5"/>
+        <line x1="130" y1="70" x2="130" y2="220" stroke="#3E6E97" stroke-width="1"/>
+        <line x1="170" y1="70" x2="170" y2="220" stroke="#3E6E97" stroke-width="1"/>
+        <line x1="90" y1="120" x2="210" y2="120" stroke="#3E6E97" stroke-width="1"/>
+        <line x1="90" y1="170" x2="210" y2="170" stroke="#3E6E97" stroke-width="1"/>
+        <path d="M115 285 L185 285 L185 295 L150 310 L115 295 Z" fill="none" stroke="#9FB8D1" stroke-width="1.5"/>
         <g id="pitches"></g>
       </svg>
       <div class="zone-caption" id="zone-caption">// hover a pitch</div>
@@ -385,9 +385,9 @@
     {x:118, y:150, r:6, c:'#E8DFC9', label:'SL 84 // Summer at DVSport Software'},
     {x:178, y:186, r:6, c:'#E8DFC9', label:'CH 82 // R — change of pace'},
     {x:142, y:196, r:6, c:'#E8DFC9', label:'CB 78 // Statistical analysis'},
-    {x:198, y:96,  r:5, c:'#7FA588', label:'Chase // Tech such as Trackman + KinaTrax + NewtForce'},
-    {x:104, y:92,  r:5, c:'#7FA588', label:'Edge // Automated scouting reports'},
-    {x:224, y:150, r:5, c:'#7FA588', label:'Ball // 4+ years as a Football Manager'}
+    {x:198, y:96,  r:5, c:'#7096B8', label:'Chase // Tech such as Trackman + KinaTrax + NewtForce'},
+    {x:104, y:92,  r:5, c:'#7096B8', label:'Edge // Automated scouting reports'},
+    {x:224, y:150, r:5, c:'#7096B8', label:'Ball // 4+ years as a Football Manager'}
   ];
   const g = document.getElementById('pitches');
   const cap = document.getElementById('zone-caption');
